@@ -1,0 +1,361 @@
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*
+.getInTouch {
+    border: solid 1px black;
+    background-color: #35363A;
+    color: white;
+    position: fixed;
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;  
+}
+
+.getInTouch ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+.getInTouch li a{
+    text-decoration: none;
+    color: white;
+}
+*/
+
+li a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #35363A;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 20px;
+}
+
+nav li a {
+    color: white;
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav h3 {
+  font-family: 'Pinyon Script', cursive;
+  font-family: 'Tangerine', cursive;
+  font-size: 30px;
+  margin: 0 0 0 10px;
+  letter-spacing: 3px;
+}
+
+
+
+
+/* ------   About Me Sectiom -----*/
+
+.about {
+    padding-top: 30px;
+}
+
+.about h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8vw;
+  font-weight: 200;
+  margin-top: 50px;
+  padding-left: 20px;
+  border-bottom: 1px solid black;
+  width: 50vw;
+  
+}
+
+.about p {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+.about ul{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.about ul li {
+  padding: 20px;
+  margin: 20px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.about ul li a {
+  color: black;
+}
+
+.about .fa {
+  margin: 10px;
+}
+
+.about i {
+  font-size: 25px ;
+}
+
+/* --------  Skills ------- */
+
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+
+.skills h2{
+  text-align: center;
+  width: 20%;
+  margin: 20px auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.skills .img{
+  margin: 0 20px;
+}
+
+.skills .img img {
+  height: 100px;
+}
+
+.skills p{
+  text-align: center;
+}
+
+
+/* ------  Projects ------- */
+
+.projects{
+    height: 95vh;
+}
+
+.projects h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8vw;
+  font-weight: 200;
+  border-bottom: 1px solid black;
+  width: 50vw;
+  padding-top: 20px;
+}
+
+/* ------  Testimonials ------- */
+
+/*  Testimonial Section  */
+
+.testimonialContainer {
+    width: 100%;
+    position: relative;
+  }
+  
+ .testimonialContainer h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8vw;
+  font-weight: 200;
+  border-bottom: 1px solid black;
+  width: 50vw;
+  padding-left: 20px;
+  padding-top: 20px;
+ }
+
+ .testimonialContainer h2{
+   text-align: center;
+ }
+  
+  .wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  
+  .wrapper .testimonialContainer {
+    position: relative;
+    width: 450px;
+    color: #fff;
+    background: #222;
+    margin: 50px 20px;
+    padding: 30px 20px;
+    border-radius: 3px;
+    flex-grow: 1;
+  }
+  
+  .wrapper .testimonialContainer .testimonial {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+  }
+  
+  .wrapper .testimonialContainer .testimonial .testimonialImage {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 8px solid #070c0d;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .wrapper .testimonialContainer .testimonial .testimonialImage img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease;
+  }
+  
+  .wrapper .testimonialContainer .testimonial .testimonialImage:hover img {
+    filter: saturate(140%);
+    transform: scale(0.95);
+  }
+  
+  .wrapper .testimonialContainer .testimonial h2 {
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+  
+  .wrapper .testimonialContainer p {
+    padding: 0 10px;
+    margin-top: -90px;
+  }
+  
+  .rodrigoTest {
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+  
+  .javierTest {
+    margin-bottom: 8px;
+    line-height: 22px;
+  }
+  
+  .abbottTest {
+    line-height: 20px;
+  }
+  
+  .wrapper .testimonialContainer .left {
+    font-size: 30px;
+    display: block;
+    text-align: left;
+    color: #3b7cf5;
+  }
+  
+  .wrapper .testimonialContainer .right {
+    font-size: 30px;
+    display: block;
+    text-align: right;
+    color: #3b7cf5;
+  }
+  
+  .wrapper .testimonialContainer .social {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .wrapper .testimonialContainer .social i {
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.085);
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wrapper .testimonialContainer .social i:hover {
+    background: #3b7cf5;
+  }
+
+
+/* ------  Contact ------- */
+
+.contact{
+    height: 95vh;
+}
+
+.contact h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8vw;
+  font-weight: 200;
+  border-bottom: 1px solid black;
+  width: 50vw;
+  padding-left: 20px;
+ }
+
+.contact p {
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  
+}
+
+.contact .inputClass {
+  height: 50px;
+  width: 800px;
+  margin: 20px;
+  font-size: 20px;
+  font-family: inherit;
+  padding-left: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submitButton {
+  width: 150px;
+  height: 30px;
+  font-size: inherit;
+}
+
+.contact .textbox {
+  height: 200px;
+  width: 800px;
+  font-size: 20px;
+  font-family: inherit;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.textbox {
+  padding-left: 10px;
+  padding-top: 10px;
+}

@@ -1,0 +1,49 @@
+body{
+    background-color: #35363A;
+    color: white;
+}
+
+.intro {
+    position: relative;
+    text-align: center;
+    top: 35%;
+    
+}
+
+h1 {
+    font-family: 'Pinyon Script', cursive;
+    font-family: 'Tangerine', cursive;
+    font-size: 10vw; 
+    margin: 0;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 6px;
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+@media only screen and (max-width: 820px) {
+    h1 {
+        font-size: 20vw;
+    }
+    h4 {
+        font-size: 5vw;
+    }
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border-color: lightgreen;
+    border-radius: 10px;
+    background-color: #35363A;
+    color: white;
+}
+
+button:hover {
+   cursor: pointer; 
+}
