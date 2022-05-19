@@ -7,69 +7,165 @@ body {
 html {
   scroll-behavior: smooth;
 }
-/*
-.getInTouch {
-    border: solid 1px black;
-    background-color: #35363A;
-    color: white;
-    position: fixed;
-    width: 350px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;  
-}
 
-.getInTouch ul{
-    list-style: none;
-    text-decoration: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #35363A;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
-
-.getInTouch li a{
-    text-decoration: none;
-    color: white;
-}
-*/
-
-li a {
-    text-decoration: none;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    background-color: #35363A;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
-
-nav li {
-    display: inline-block;
-    padding: 0 20px;
-    margin-right: 20px;
-}
-
-nav li a {
-    color: white;
-    
-}
-
-.nav a {
-    text-decoration: none;
-    color: white;
-}
-
-.nav h3 {
-  font-family: 'Pinyon Script', cursive;
-  font-family: 'Tangerine', cursive;
-  font-size: 30px;
-  margin: 0 0 0 10px;
+.navbar h1 {
+  font-family: 'Goldman', cursive;
+  margin-left: 20px; 
+  color: white;
   letter-spacing: 3px;
 }
 
+.navbar a {
+  text-decoration: none;
+}
+
+.navlinks ul li{
+  display: inline-flex;
+  justify-content: space-around;  
+  margin: 12px 20px;
+}
+
+.navlinks ul {
+  margin-right: 20px;
+  font-family: 'Goldman', cursive;
+}
+
+.navlinks a {
+  color: white;
+  font-size: 20px;
+}
+
+.navlinks a:hover {
+  color: white;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 40px #fff;
+  transition: 0.5s;
+}
+
+
+
+.checkButton {
+  font-size: 28px;
+  cursor: pointer;
+  float: right;
+  margin-top: 15px;
+  margin-right: 20px;
+  display: none;
+}
+
+.burgerMenu {
+  display: none;
+}
+
+.burgerLinks {
+  display: none;
+  font-family: 'Goldman', cursive;
+}
+
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .navlinks ul {
+      display: none;
+  }
+
+  .checkButton {
+      display: initial;
+      color: white
+  }
+
+  .burgerMenu {
+      display: initial;
+  }
+
+  .navbar h1 {
+      font-size: 20px;
+  }
+
+  .burgerLinks {
+      display: none;
+      width: 100%;
+      background-color: #35363A;
+      justify-content: center;
+      padding-top: 55px;
+      position: fixed;
+      z-index: 1;
+      
+  }
+
+  .burgerLinks ul li:hover {
+      background-color: #3d4447;
+      transition: .7s;
+  }
+
+  .burgerLinks li {
+      list-style: none;
+      padding: 20px;
+
+  }
+
+  .burgerLinks ul li{
+      width: 100vw;
+      text-align: center;
+  }
+
+  .burgerLinks a {
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      margin-right: 35px;
+
+  }
+
+  .burgerLinks.active {
+      display: flex;
+  }
+
+  .skills p{
+    margin-top: -10px;
+  }
+
+  .about ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 300px;
+
+  }
+
+  .about ul li{
+    display: flex;
+    align-items: flex-start;
+    height: 20px;
+  }
+
+  .about ul li a {
+    margin-top: 15px;
+    margin-right: 75px;
+    font-size: 16px;
+
+  }
+
+  .testimonialContainer h1 {
+    margin-bottom: 65px;
+  }
+ 
+
+
+}
 
 
 
@@ -91,14 +187,18 @@ nav li a {
 }
 
 .about p {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
+  line-height: 30px;
+  text-indent: 30px;
+  font-size: large;
 }
 
 
 .about ul{
   display: flex;
   justify-content: center;
+ 
   
 }
 
@@ -107,6 +207,7 @@ nav li a {
   margin: 20px;
   list-style: none;
   font-size: 20px;
+  
 }
 
 .about ul li a {
@@ -143,19 +244,18 @@ nav li a {
 }
 
 .skills .img img {
-  height: 100px;
+  max-height: 100px;
+  height: 10vw;
+  padding: 20px;
 }
 
 .skills p{
   text-align: center;
+  margin-top: -5px;
 }
 
 
 /* ------  Projects ------- */
-
-.projects{
-    height: 95vh;
-}
 
 .projects h1{
   font-family: 'Montserrat', sans-serif;
@@ -163,10 +263,93 @@ nav li a {
   font-weight: 200;
   border-bottom: 1px solid black;
   width: 50vw;
-  padding-top: 20px;
+  padding-top: 55px;
 }
 
-/* ------  Testimonials ------- */
+.projectMain {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.projectContainer {
+  width: 450px;
+  height: 550px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 20px lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.imageContainer {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.buttonAndLink {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 25px;
+  width: 99%;
+}
+
+.buttonAndLink a {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.buttonAndLink button {
+  background: #3d4447;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: .5s;
+  box-shadow: 0 0 0 1px #353535;
+  letter-spacing: 2px;
+  
+}
+
+.buttonAndLink button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgb(93, 93, 93);
+  
+}
+
+.descriptionContainer h3 {
+  margin: 10px;
+  padding: 5px;
+  font-size: 22px;
+}
+
+.descriptionContainer p {
+  font-size: 18px;
+  margin: 10px 10px 0 10px; 
+  padding-top: 5px;
+}
+
+.languages {
+  text-align: center;
+}
+
+
+
 
 /*  Testimonial Section  */
 
@@ -182,7 +365,7 @@ nav li a {
   border-bottom: 1px solid black;
   width: 50vw;
   padding-left: 20px;
-  padding-top: 20px;
+  padding-top: 55px;
  }
 
  .testimonialContainer h2{
@@ -199,7 +382,7 @@ nav li a {
   
   .wrapper .testimonialContainer {
     position: relative;
-    width: 450px;
+    max-width: 450px;
     color: #fff;
     background: #222;
     margin: 50px 20px;
@@ -305,8 +488,9 @@ nav li a {
 
 /* ------  Contact ------- */
 
-.contact{
-    height: 95vh;
+.contactContainer{
+    margin: 0 auto;
+    width: 90%;
 }
 
 .contact h1{
@@ -318,23 +502,23 @@ nav li a {
   padding-left: 20px;
  }
 
-.contact p {
-  width: 800px;
+.contactContainer p {
+  width: 75%;
   margin: 0 auto;
-  padding-bottom: 50px;
+  
   
 }
 
-.contact .inputClass {
+.contactContainer .inputClass {
   height: 50px;
-  width: 800px;
-  margin: 20px;
+  width: 75%;
+  margin: 25px;
   font-size: 20px;
   font-family: inherit;
   padding-left: 10px;
 }
 
-.contact form {
+.contactContainer form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,13 +530,12 @@ nav li a {
   font-size: inherit;
 }
 
-.contact .textbox {
+.contactContainer .textbox {
   height: 200px;
-  width: 800px;
+  width: 75%;
   font-size: 20px;
   font-family: inherit;
   margin: 20px;
-  border: 1px solid black;
 }
 
 .textbox {
